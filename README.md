@@ -1,6 +1,6 @@
 # dom-goggles
 
-<div align="center"><img src="http://i.imgur.com/ZkwFZJy.png"></div>
+<div align="center"><img src="http://i.imgur.com/Jj4dyHY.png"></div>
 
 What an adorable name, isn't it? i'm kind of proud of it myself. ANYWAY. This tool basically takes an array of websites, an array of strings to look up and will tell you to the best of its skills (it uses phantomjs so modern javascript might break this poor thing) how many times each appears, per webpage and total
 
