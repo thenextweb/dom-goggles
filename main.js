@@ -10,7 +10,7 @@ const test = (url,tests) => {
 					return response.text();
 				}
 				else {
-					reject(response)
+					reject(response);
 				}
 			})
 			.then(function(text) {
@@ -20,21 +20,21 @@ const test = (url,tests) => {
 						new RegExp(test.source,test.flags);
 
 					let matches = text.match(regex);
-					solution[test] = matches?matches.length:0
-				})
-				resolve(solution)
+					solution[test] = matches?matches.length:0;
+				});
+				resolve(solution);
 			})
 			.catch(reject);
 	});
-}
+};
 
 const main = (webpages, tests, options={}) => {
 
 	if(typeof webpages === 'string') {
-		webpages = [webpages]
+		webpages = [webpages];
 	}
 	if(typeof tests === 'string') {
-		tests = [tests]
+		tests = [tests];
 	}
 
 	if(!tests || !webpages) {
@@ -54,20 +54,20 @@ const main = (webpages, tests, options={}) => {
 					if(resultsByWebpage[url][test] > 0) {
 						resultsTotal[test] += resultsByWebpage[url][test];
 					}
-				})
-			})
+				});
+			});
 			resolve({
 				total: resultsTotal,
 				byWebpage: resultsByWebpage
 			});
-		}
+		};
 
 		const returnMaybe = () => {
 			count++;
 			if(count >= webpages.length) {
-				finalPass()
+				finalPass();
 			}
-		}
+		};
 
 		if(options.report) console.log('> Started');
 
@@ -78,19 +78,19 @@ const main = (webpages, tests, options={}) => {
 					let results = (()=>{
 						let arr = [];
 						Object.keys(solution).map(key=>{
-							if(solution[key] > 0) arr.push(key)
+							if(solution[key] > 0) arr.push(key);
 						});
 						return arr;
 					})();
 					console.log(`> ${url} – ${results.length}/${tests.length} `);
 					console.log('> '+results.join(', '));
 				}
-				resultsByWebpage[url] = solution
+				resultsByWebpage[url] = solution;
 				returnMaybe();
 			})
 			.catch(error => {
 				reject(error);
-			})
+			});
 		});
 
 	});
