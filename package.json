@@ -1,10 +1,10 @@
 {
   "name": "dom-goggles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Look up keywords & their frequence over a list of pages",
   "main": "main.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter nyan"
+    "test": "./node_modules/eslint/bin/eslint.js . && ./node_modules/.bin/mocha --reporter nyan"
   },
   "engines": {
     "node": ">=7.0.0"
@@ -22,5 +22,8 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "zombie": "^5.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0"
   }
 }
