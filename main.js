@@ -19,8 +19,8 @@ const test = (url,tests) => {
 						new RegExp(test,'g'):
 						new RegExp(test.source,test.flags);
 
-                    let matches = text.match(regex);
-                    solution[test] = matches?matches.length:0
+					let matches = text.match(regex);
+					solution[test] = matches?matches.length:0
 				})
 				resolve(solution)
 			})
