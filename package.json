@@ -1,0 +1,26 @@
+{
+  "name": "dom-goggles",
+  "version": "1.0.0",
+  "description": "Look up keywords & their frequence over a list of pages",
+  "main": "main.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lawwrr/dom-goggles.git"
+  },
+  "keywords": [
+    "tool"
+  ],
+  "author": "Laura mayhem",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "zombie": "^5.0.5"
+  }
+}
