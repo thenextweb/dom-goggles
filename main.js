@@ -101,16 +101,4 @@ const main = (webpages, tests, options={}) => {
 };
 
 
-main(
-	['http://facebook.com','http://youtube.com','http://yahoo.com'],
-	['<div'],
-	{report: true}
-).then(results => {
-	console.log(' ')
-	console.log(' –––––– ')
-	console.log(' ')
-	console.log(results);
-}).catch(e => {})
-
-
 module.exports = main;
