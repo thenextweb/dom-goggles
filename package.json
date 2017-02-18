@@ -1,10 +1,10 @@
 {
   "name": "dom-goggles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Look up keywords & their frequence over a list of pages",
   "main": "main.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter nyan"
   },
   "engines": {
     "node": ">=7.0.0"
