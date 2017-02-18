@@ -10,7 +10,7 @@ describe("Dom goggles", function() {
 			'http://google.com',
 			'<body',
 			{
-				logger. true
+				logger: true
 			}
 		).then(results => {
 			try {
