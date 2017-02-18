@@ -86,8 +86,8 @@ const main = (webpages, tests, options={}) => {
 						});
 						return arr;
 					})();
-					console.log(results);
 					console.log(`> ${url} – ${results.length}/${tests.length} `);
+					console.log('> '+results.join(', '));
 				}
 				resultsByWebpage[url] = solution
 				returnMaybe();
@@ -99,6 +99,18 @@ const main = (webpages, tests, options={}) => {
 
 	});
 };
+
+
+main(
+	['http://facebook.com','http://youtube.com','http://yahoo.com'],
+	['<div'],
+	{report: true}
+).then(results => {
+	console.log(' ')
+	console.log(' –––––– ')
+	console.log(' ')
+	console.log(results);
+}).catch(e => {})
 
 
 module.exports = main;
