@@ -15,16 +15,12 @@ const test = (url,tests) => {
 			})
 			.then(function(text) {
 				tests.map(test => {
-
 					let regex = (!test.test)?
 						new RegExp(test,'g'):
-						test
+						new RegExp(test.source,test.flags);
 
-					try {
-						solution[test] = text.match(regex).length
-					} catch(e) {
-						solution[test] = 0;
-					}
+                    let matches = text.match(regex);
+                    solution[test] = matches?matches.length:0
 				})
 				resolve(solution)
 			})
