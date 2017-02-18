@@ -4,6 +4,9 @@ const domGoggles = require('../main');
 describe("Dom goggles", function() {
 
 
+	this.timeout(5000);
+
+
 	it("looks for a body tag on google.com & logs all of it", function(done) {
 
 		domGoggles(
