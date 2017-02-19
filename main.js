@@ -83,7 +83,7 @@ const main = (webpages, tests, options={}) => {
 						return arr;
 					})();
 					console.log(`> ${url} – ${results.length}/${tests.length} `);
-					console.log('> '+results.join(', '));
+					console.log('  '+results.join(', '));
 				}
 				resultsByWebpage[url] = solution;
 				returnMaybe();
