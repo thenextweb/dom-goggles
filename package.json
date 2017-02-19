@@ -1,6 +1,6 @@
 {
   "name": "dom-goggles",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Look up keywords & their frequence over a list of pages",
   "main": "main.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lawwrr/dom-goggles.git"
+    "url": "https://github.com/walaura/dom-goggles.git"
   },
   "keywords": [
     "tool"
